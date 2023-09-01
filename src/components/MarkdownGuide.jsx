@@ -3,6 +3,8 @@ import styled from 'styled-components';
 const GuideContainer = styled.div`
   background-color: #f5f5f5;
   padding: 1rem;
+  margin: 10px;
+  border: 1px solid #ddd;
 `;
 
 const MarkdownGuide = () => {
