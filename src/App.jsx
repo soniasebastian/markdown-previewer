@@ -31,11 +31,15 @@ const App = () => {
     setMarkdown(newMarkdown);
   };
 
+  const handleToggle = (newMarkdown) => {
+    setShowGuide(!showGuide)
+  };
+
   return (
     <>
       <GlobalStyles />
       <div className="App">
-        <Header onToggleGuide={() => setShowGuide(!showGuide)} />
+        <Header onToggleGuide={handleToggle} />
         {showGuide && <MarkdownGuide />}
         <Container>
           <MarkdownInput value={markdown} handleChange={handleMarkdownChange} />

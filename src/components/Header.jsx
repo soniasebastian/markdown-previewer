@@ -32,14 +32,18 @@ const Wrapper = styled.section`
 padding: 4em;
 background:skyblue;
 `;
-const Header = (onToggleGuide) =>  {
+const Header = (props) =>  {
   
     return (
         <Wrapper>
         <Title>A Simple Markdown Previewer</Title>
-        <Button  onClick={onToggleGuide}> Markdown Cheat Sheet</Button>
+        <Button  onClick={() => props.onToggleGuide()}> Markdown Cheat Sheet</Button>
         </Wrapper>
     );
   }
+
+  Header.propTypes = {
+    onToggleGuide: 'function',
+  };
   
   export default Header;
