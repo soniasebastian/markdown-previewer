@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown';
-import React from 'react';
+
 
 // Styled component
 const InputContainer = styled.div`
@@ -39,7 +39,7 @@ const MarkdownInput = (props) => {
 // Basic prop type checking
 MarkdownInput.propTypes = {
   value: 'string',
-  onChange: 'function',
+  handleChange: 'function',
 };
 
 export default MarkdownInput;

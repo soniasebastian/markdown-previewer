@@ -1,9 +1,9 @@
 import  styled  from 'styled-components';
-import React from 'react'
+// import React from 'react'
 
-interface HeaderProps {
-  onToggleGuide: () => void;
-}
+// interface HeaderProps {
+//   onToggleGuide: () => void;
+// }
 
 const Title = styled.h1`
 font-size: 2em;
@@ -32,7 +32,7 @@ const Wrapper = styled.section`
 padding: 4em;
 background:skyblue;
 `;
-const Header = ({onToggleGuide}: HeaderProps) =>  {
+const Header = (onToggleGuide) =>  {
   
     return (
         <Wrapper>
