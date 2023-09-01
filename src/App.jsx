@@ -31,7 +31,7 @@ const App = () => {
     setMarkdown(newMarkdown);
   };
 
-  const handleToggle = (newMarkdown) => {
+  const handleToggle = () => {
     setShowGuide(!showGuide)
   };
 
