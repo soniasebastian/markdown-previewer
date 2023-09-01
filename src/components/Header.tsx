@@ -24,7 +24,7 @@ border: 2px solid #BF4F74;
 border-radius: 3px;
 cursor: pointer;
 transition: background-color 0.2s;
-&:hover {
+&:hover 
   background-color: #35a8d4;
 `;
 
