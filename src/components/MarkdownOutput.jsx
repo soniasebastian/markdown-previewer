@@ -16,6 +16,7 @@ background-color: #f9f9f9;
 
 // MarkdownOutput component
 const MarkdownOutput = (props) => {
+  console.log(props.value);
   return (
     <OutputContainer>
       <ReactMarkdown>{props.value}</ReactMarkdown>

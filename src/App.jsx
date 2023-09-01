@@ -1,15 +1,16 @@
-import { useState } from 'react';
-import Header from './components/Header'; // Import your Header component
-import MarkdownGuide from './components/MarkdownGuide'; // Import your MarkdownGuide component
-import MarkdownInput from './components/MarkdownInput'; // Import your MarkdownInput component
-import MarkdownOutput from './components/MarkdownOutput'; // Import your MarkdownOutput component
-import './App.css'; // You can import your CSS file if needed
+import  { useState } from 'react';
+import Header from './components/Header';
+import MarkdownGuide from './components/MarkdownGuide';
+import MarkdownInput from './components/MarkdownInput';
+import MarkdownOutput from './components/MarkdownOutput';
+import './App.css';
 import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
 
 const Container = styled.div`
   display: flex;
   width: 100%;
+  justify-content: space-between; /* Add this to space the input and output */
 `;
 
 const GlobalStyles = createGlobalStyle`
@@ -30,25 +31,19 @@ const App = () => {
     setMarkdown(newMarkdown);
   };
 
-  // const handleToggleGuide = (showGuide) => {
-  //   setShowGuide(!showGuide);
-  // };
-
   return (
     <>
-     <GlobalStyles />
-    <div className="App">
-      <Header onToggleGuide={() => setShowGuide(!showGuide)} />
-      {showGuide && <MarkdownGuide />}
-      <Container/>
-      <MarkdownInput value={markdown} onChange={handleMarkdownChange} />
-      <MarkdownOutput markdown={markdown} />
+      <GlobalStyles />
+      <div className="App">
+        <Header onToggleGuide={() => setShowGuide(!showGuide)} />
+        {showGuide && <MarkdownGuide />}
+        <Container>
+          <MarkdownInput value={markdown} handleChange={handleMarkdownChange} />
+          <MarkdownOutput value={markdown} />
+        </Container>
       </div>
     </>
   );
 };
 
 export default App;
-
-
-

@@ -30,7 +30,7 @@ const StyledTextArea = styled.textarea`
 const MarkdownInput = (props) => {
   return (
     <InputContainer>
-      <StyledTextArea value={props.value} onChange={props.onChange} />
+      <StyledTextArea value={props.value} onChange= { (e) => props.handleChange(e.target.value) }/>
       <ReactMarkdown>{props.value}</ReactMarkdown>
     </InputContainer>
   );
